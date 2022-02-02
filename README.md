@@ -120,9 +120,9 @@ dove:
 K-Fold Cross Validation consiste nel dividere equamente il training set in k subsets, e in k iterazioni si usa 1 subset diverso dai precedenti come test set e tutti gli altri come training set.\
 Per ogni interazione viene calcolato:
     - **True Edible:** corettamente predetti commestibili (TP);
-    - **True Negative:** correttamente predetti velenosi(TN);
-    - **False Positive:** erroneamente predetti commestibili(FP);
-    - **False Negative:** erroneamente predetti (FN);
+    - **True Negative:** correttamente predetti velenosi (TN);
+    - **False Positive:** erroneamente predetti commestibili (FP);
+    - **False Negative:** erroneamente predetti velenosi (FN);
     - **Accuracy:** accurancy of the system with that subset as test calculated as ```TP + TN / (TP + TN + FP + FN) ```.
 
     Infine viene fatta una media delle k accuratezze.
