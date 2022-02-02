@@ -26,11 +26,11 @@
 Per la realizzazione del caso di studio ho scelto di trattare un'attività diffusa nel territorio dell'alta murgia pugliese, ovvero, la caccia dei funghi.\
  Il cacciatore di funghi **"fungiaridd"**, soprattutto colui che si improvvisa tale, corre il pericolo di raccogliere il fungo sbagliato; non è raro sentire di persone gravemente intossicate per l'ingestione di funghi velenosi o l'inalazione delle loro spore.
 
- Così ho ricercato un dataset sui funghi commestibili e non è da qui è nato Fungiaridd che classifica i funghi come Commestibili e Velenosi mediante una descrizione dei loro arrtibuti, per esempio la superficie del cappello, il suo colore la sua forma, la larghezza del gampo etc...
+ Così ho ricercato un dataset sui funghi commestibili e non, da qui è nato Fungiaridd che classifica i funghi come Commestibili o Velenosi mediante una descrizione dei loro arrtibuti, per esempio la superficie del cappello, il suo colore e la sua forma, la larghezza del gampo etc...
 
  ## 2. Il Dataset 
 
-# <p style="text-align: center;">  ![uniba-logo](./res/img/dataset.png)</p>
+# <p style="text-align: center;">  ![dataset](./res/img/dataset.png)</p>
 
 Il [**Dataset**](https://www.kaggle.com/hatterasdunton/mushroom-classification-updated-dataset/) utilizzato si compone 8124 esempi di funghi (52% commestibili e 48% velenosi) classificati mediante la descrizione di 23 attributi:
 
@@ -52,7 +52,7 @@ Il [**Dataset**](https://www.kaggle.com/hatterasdunton/mushroom-classification-u
 - **stalk-color-below-ring (colore del gambo sotto l'anello):** brown, buff, cinnamon, gray, orange, pink, red, white, yellow
 - **veil-type (cuticola del fungo):** partial, universal
 - **veil-color (colore della cuticola):** brown, orange, white, yellow
-- **ring-number (numero di anelli): none, one, two
+- **ring-number (numero di anelli):** none, one, two
 - **ring-type (tipo di anello):** cobwebby, evanescent, flaring, large, none, pendant, sheathing, zone
 - **spore-print-color ():** black, brown, buff, chocolate, green, orange, purple, white, yellow
 - **population (popolazione):** abundant, clustered, numerous, scattered, several, solitary
@@ -62,11 +62,11 @@ Il [**Dataset**](https://www.kaggle.com/hatterasdunton/mushroom-classification-u
  
 
  ## 3. Linguaggio IDE utilizzati e altri requisiti
- Per la realizzazione del classificatore e delle latre componenti è stato utilizzato il lingiaggio Java.
+ Per la realizzazione del classificatore e delle altre componenti è stato utilizzato il lingiaggio Java.
  - jdk versione 11+
     - Come ambiente di sviluppo java è stato utilizzato [**IntelliJ IDEA**](https://www.jetbrains.com/idea//).
- - viene utilizzato inoltre, maven per l'inclusione dell package  ```opencsv ```, il quale contiene una classe utility per la lettura di file csv (CSVReader).
- Aggiungere questa dipendenza nel file  ```pom.xml ``` sotto la voce ```<dependencies> </dependencies>```
+ - viene utilizzato inoltre, maven per l'inclusione dell package ```opencsv```, il quale contiene una classe utility per la lettura di file csv (CSVReader).
+ Aggiungere questa dipendenza nel file ```pom.xml``` sotto la voce ```<dependencies> </dependencies>```
 
  ```
         <dependency>
@@ -83,7 +83,7 @@ dove:
 
     - p(A | B), p(B | A) sono le probabilità condizionate a posteriori.
 
-    Naive Bayes permette di calcolare per ogni istanza la probabilità di appartenenza a una classe mediante il calcolo a priori della probabilità che un attributo Xn appartenga alla classe Yn tenendo conto delle informazioni di cui si è già in possesso, per esempio: Con quale probabilità un fungo dal cappello rosso (e denotato da altre coppie attributi:valore) appartiene alla classe Edible? Con quale alla classe Poisonous? P(cap-color:red | class:edible) e P(cap-color:red | class:poisonous) 
+    Naive Bayes permette di calcolare per ogni istanza la probabilità di appartenenza a una classe mediante il calcolo a priori della probabilità che un attributo Xn appartenga alla classe Cn tenendo conto delle informazioni di cui si è già in possesso, per esempio: Con quale probabilità un fungo dal cappello rosso (e denotato da altre coppie attributi:valore) appartiene alla classe Edible? Con quale alla classe Poisonous? P(cap-color:red | class:edible) e P(cap-color:red | class:poisonous) 
 
     1) Vengono divisi gli esempi del training set nelle varie categorie, in questo caso Commestibile e Velenoso;
 
@@ -93,8 +93,7 @@ dove:
         ![cat_prb](./res/img/category-probability.png)
 
 
-    3) Viene estratto dagli esempi di training un insieme (insieme
-    _degli_attributi) di coppie attributo:valore senza ripetizione;
+    3) Viene estratto dagli esempi di training un insieme (insieme_degli_attributi) di coppie attributo:valore senza ripetizione;
 
     4) A questo punto si calcola la probabilità a priori p(Xn | C) dividendo il numero di occorrenze nella categoria C di Xn (#Xn_in_C) con il numero totale di coppie attributo:valore nella categoria C (#coppie_in_C):\
      ```p(Xn | C) = #Xn_in_C / #coppie_in_C```;\
