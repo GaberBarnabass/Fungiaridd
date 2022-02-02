@@ -14,10 +14,10 @@
 
 ## Indice
  1. [Introduzione](#1introduzione)
- 2. [Modello di dominio](#2il-dataset)
- 3. [Requisiti specifici](#3linguaggio-ide-utilizzati-e-altri.requisiti)
- 4. [Requisiti specifici](#4algoritmi-implementati)
- 5. [Requisiti specifici](#5struttura-del-progetto)
+ 2. [Il Dataset](#2il-dataset)
+ 3. [Linguaggo IDE e altri requisiti](#3linguaggio-ide-utilizzati-e-altri-requisiti)
+ 4. [Alforitmi implementati](#4algoritmi-implementati)
+ 5. [Struttura del progetto](#5struttura-del-progetto)
 
 
 
