@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"NaiveBayes","l":"Category"},{"p":"NaiveBayes","l":"Example"},{"p":"<Unnamed>","l":"FungiariddTest"},{"p":"<Unnamed>","l":"KFoldCrossValidation"},{"p":"NaiveBayes","l":"NaiveBayesClassifier"},{"p":"<Unnamed>","l":"Utils"}]
