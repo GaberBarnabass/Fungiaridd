@@ -122,7 +122,7 @@ Per ogni iterazione viene calcolato:
     - **True Negative:** correttamente predetti velenosi (TN);
     - **False Positive:** erroneamente predetti commestibili (FP);
     - **False Negative:** erroneamente predetti velenosi (FN);
-    - **Accuracy:** accuratezza del sistema in questa iterazione```TP + TN / (TP + TN + FP + FN) ```.
+    - **Accuracy:** accuratezza del sistema in questa iterazione ```TP + TN / (TP + TN + FP + FN) ```.
 
     Infine viene fatta una media delle k accuratezze.
 
