@@ -20,13 +20,12 @@
  5. [Struttura del progetto](#5struttura-del-progetto)
 
 
-
-
  ## 1.  Introduzione
 Per la realizzazione del caso di studio ho scelto di trattare un'attività diffusa nel territorio dell'alta murgia pugliese, ovvero, la caccia dei funghi.\
  Il cacciatore di funghi **"fungiaridd"**, soprattutto colui che si improvvisa tale, corre il pericolo di raccogliere il fungo sbagliato; non è raro sentire di persone gravemente intossicate per l'ingestione di funghi velenosi o l'inalazione delle loro spore.
 
- Così ho ricercato un dataset sui funghi commestibili e non, da qui è nato Fungiaridd che classifica i funghi come Commestibili o Velenosi mediante una descrizione dei loro arrtibuti, per esempio la superficie del cappello, il suo colore e la sua forma, la larghezza del gampo etc...
+ Così ho ricercato un dataset sui funghi commestibili e non, da qui è nato Fungiaridd che classifica i funghi come Commestibili o Velenosi mediante la descrizione dei loro arrtibuti come per esempio la superficie del cappello, il suo colore e la sua forma, la larghezza del gambo etc...
+
 
  ## 2. Il Dataset 
 
@@ -58,23 +57,6 @@ Il [**Dataset**](https://www.kaggle.com/hatterasdunton/mushroom-classification-u
 - **population (popolazione):** abundant, clustered, numerous, scattered, several, solitary
 - **habitat:** grasses, leaves, meadows, paths, urban, waste, woods
 
-
- 
-
- ## 3. Linguaggio IDE utilizzati e altri requisiti
- Per la realizzazione del classificatore e delle altre componenti è stato utilizzato il lingiaggio Java.
- - jdk versione 11+
-    - Come ambiente di sviluppo java è stato utilizzato [**IntelliJ IDEA**](https://www.jetbrains.com/idea//).
- - viene utilizzato inoltre, maven per l'inclusione dell package ```opencsv```, il quale contiene una classe utility per la lettura di file csv (CSVReader).
- Aggiungere questa dipendenza nel file ```pom.xml``` sotto la voce ```<dependencies> </dependencies>```
-
- ```
-        <dependency>
-            <groupId>com.opencsv</groupId>
-            <artifactId>opencsv</artifactId>
-            <version>5.3</version>
-        </dependency>
- ```
 
 ## 4. Algoritmi implementati
 - **Classificatore di Naive Bayes:** classificatore probabilistico bastato sul Teorema di Bayes ma con assunzione di indipendenza degli attributi. La pobabilità Bayesiana usa il concetto di probabilità condizionata, ovvero la probabilità di un evento A considerando le informazioni disponibili sull'evento B ```P(A | B) = p(A)*p(B | A) / p(B)```
@@ -118,7 +100,7 @@ dove:
 - **K-Fold Cross Validation:** algoritmo utilizzato per testare il sistema sulla sua accuratezza senza dover trascurare parte del training set per creare un test set.
 K-Fold Cross Validation consiste nel dividere equamente il training set in k subsets, e in k iterazioni si usa 1 subset diverso dai precedenti come test set e tutti gli altri come training set.\
 Per ogni iterazione viene calcolato:
-    - **True Edible:** corettamente predetti commestibili (TP);
+    - **True Positive:** corettamente predetti commestibili (TP);
     - **True Negative:** correttamente predetti velenosi (TN);
     - **False Positive:** erroneamente predetti commestibili (FP);
     - **False Negative:** erroneamente predetti velenosi (FN);
